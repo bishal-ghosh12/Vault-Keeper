@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/signup.css">
+        <title>Two factor Authentication</title>
+    </head>
+<body>
+<form action="/pms/verifytoken" id="myform" method="POST" style="border:1px solid #ccc">
+  <div class="container">
+    <p>Two Factor Authentication</p>
+    <hr>
+
+    <label for="email"><b>Token</b></label>
+    <input type="text" placeholder="6-digit code" id="email" name="token" required>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn" id="signup">Verify</button>
+    </div>
+  </div>
+</form>
+    <!-- <script src="../js/login.js"></script> -->
+</body>
+</html>

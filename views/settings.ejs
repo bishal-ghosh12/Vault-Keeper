@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="../css/userView.css">
+  <link rel="stylesheet" href="../css/secret.css">
+  <link rel="stylesheet" href="../css/settings.css">
+</head>
+
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="/pms/viewall">All</a>
+    <a href="/pms/secret">Secret</a>
+    <a href="/pms/paymentsecret">Payment Secret</a>
+    <a href="/pms/settings" class="active">Settings</a>
+    <a style="float: right;" href="/pms/logout">Logout</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+  </div>
+  <div class="alert success" id="successAlert">
+    <span class="closebtn" id="closeAlert">&times;</span>  
+    <strong>Saved Successfully!</strong> 
+  </div>
+  <div class="autologout">
+    <P>ACTIVATE AUTO LOGOUT</P>
+    <label class="switch">
+      <input type="checkbox" name = "isChecked" id="check" onclick="checkRoll()" <%= checked %>>
+      <span class="slider round"></span>
+    </label>
+    <div class="timeCount" style="display: none;" id = "timer">
+      <span>Disconnect me After</span>
+      <form id="myForm">
+        <input type="number" name="quantity" id="timerValue" min="5" max="30" step="5" value="<%= time %>">
+        <input type="submit" id="submit" value="Save">
+      </form>
+    </div>
+  </div>
+  <div class="twofactorauth">
+    <P>ACTIVATE TWO-FACTOR</P>
+    <label class="switch">
+      <input type="checkbox" name = "is2fa" id="is2fa" onclick="checkRoll()" <%= twofactorAuth %>>
+      <span class="slider round"></span>
+    </label>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" id="closemodal">&times;</span>
+        <p>Activate Two-Factor authentication</p>
+        <img id="qrcode" class="QRcode" src="" alt="">
+        <form id="form2fa">
+          <input type="text" name="token" id="token" placeholder="6-digit code"> 
+          <input type="submit" id="submit1" value="Activate">
+        </form>
+        <p id="wrong_token">Invalid 6-digit Code</p>
+      </div>
+    </div>
+    <input type="submit" id="cmp" value="Change Master Password">
+    <div id="cmpModal" class="modal1">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close1" id="closecmpmodal">&times;</span>
+        <p>Change Your Master Password</p>
+        <img id="qrcode" class="QRcode" src="" alt="">
+        <form id = "changePasswordform">
+          <br>
+          <input type="text" name="changepassword" id="changepass" placeholder="Password"> <br><br>
+          <input type="text" name="changeconfirmpassword" id="cpass" placeholder="Confirm Password"> <br><br>
+          <input type="submit" id="changebutton" value="Change">
+        </form>
+        <p id="wrong_token">Invalid 6-digit Code</p>
+      </div>
+    </div>
+  </div>
+  <!-- <form id="myForm">
+    Name<input type="text" name="title" id="name">
+    <input type="submit" value="Submit" id="submit">
+  </form> -->
+
+  <!-- <script src="../js/secretUpdate.js"></script>
+  <script src="../js/secret.js"></script>
+  <script src="../js/secretView.js"></script>
+  <script src="../js/secretUpdateDelete.js"></script> -->
+  <script src="../js/settings.js"></script>
+  <script src="../js/cmp.js"></script>
+</body>
+
+</html>

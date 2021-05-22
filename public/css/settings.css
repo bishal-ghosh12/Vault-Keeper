@@ -1,0 +1,208 @@
+.autologout {
+    /* margin-left: 50%; */
+    margin-top: 200px;
+    margin-left: 500px;
+    position: absolute;
+    top: 1px;
+    left : 0px;
+}
+
+.twofactorauth {
+    margin-top: 300px;
+    margin-left: 500px;
+    position: absolute;
+    top: 1px;
+    left : 0px;
+}
+
+.twofactorauth p{
+  color: grey;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.autologout p {
+    color: grey;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.switch {
+    position: absolute;
+    top: 12px;
+    left: 215px;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 0px;
+    bottom: 1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #48f115;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(18px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #save {
+      margin-top: 10px;
+      width: 100%;
+  }
+
+  .alert {
+    border-radius: 5px;
+    margin-left: 350px;
+    margin-top: 50px;
+    padding: 20px;
+    width: 40%;
+    text-align: center;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+  }
+  
+  .alert.success {background-color: #4CAF50;}
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+
+
+
+
+  .modal, .modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 65%;
+  }
+  
+  /* The Close Button */
+  .close, .close1 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .close1:hover,
+  .close1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-content p {
+    text-align: center;
+  }
+
+  .QRcode {
+    width: 200px;
+    margin-top: 0px;
+    margin-left: 80px;
+  }
+
+  .modal-content #token {
+    margin-top: 5px;
+    margin-left: 45px;
+    width: 50%;
+  }
+
+  #wrong_token {
+    color: red;
+    display: none;
+  }
+
+  #cmp {
+    margin-top: 10px;
+    background-color: red;
+    width: 250px;
+  }
+
+  #changebutton {
+    margin-top: 10px;
+    background-color: red;
+    width: 370px;
+  }
